@@ -1,0 +1,61 @@
+{
+  "start": [
+    {
+      "token": "special_words",
+      "regex": "\\b(meow|woof|quack|oink)\\b"
+    },
+    {
+      "token": "namespace.qualifier",
+      "regex": "\\b[A-Za-z_][A-Za-z0-9_]*\\b(?=::)"
+    },
+    {
+      "token": "namespace.member",
+      "regex": "(?<=::)[A-Za-z_][A-Za-z0-9_]*\\b"
+    },
+
+    {
+      "token": "keyword.control",
+      "regex": "\\b(enum|case|new)\\b"
+    },
+
+    {
+      "token": "support.function",
+      "regex": "\\b(work_experience|company|date_range|roles|about|skills|tools|education|certifications|personal_projects|major|school|accomplishments)\\b"
+    },
+
+    {
+      "token": "constant.language",
+      "regex": "\\b(Company|Title|Data|Product|DataViz|Lang|Lib|DB|Queue|Code|Google|Project)::[A-Za-z0-9_]+\\b"
+    },
+
+    {
+      "token": "variable.language",
+      "regex": "\\$(?:from|to)\\b"
+    },
+
+    {
+      "token": "constant.language",
+      "regex": "\\b(PRESENT)\\b"
+    },
+
+    {
+      "token": "constant.numeric",
+      "regex": "\\b\\d{4}_\\d{2}\\b"
+    },
+
+    {
+      "token": "string",
+      "regex": "\"[^\"]*\""
+    },
+
+    {
+      "token": "comment.line.double-slash",
+      "regex": "\\/\\/.*$"
+    },
+
+    {
+      "token": "keyword.operator",
+      "regex": "->|::|\\[|\\]|\\(|\\)|,|;"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+}
+
+/* Top Menu */
+#top-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Fixed height for the top menu */
+  background-color: #252526;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #d4d4d4;
+}
+
+/* File Explorer (Left Panel) */
+#files {
+  position: absolute;
+  top: 50px; /* Below the top menu */
+  left: 0;
+  width: 250px; /* Fixed width for the file explorer */
+  height: calc(100% - 200px); /* Fixed height minus terminal and top menu */
+  background-color: #333333;
+  overflow-y: auto; /* Scroll if content overflows */
+  padding: 10px;
+  color: #d4d4d4;
+}
+
+#files ul {
+  list-style: none;
+}
+
+#files li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#files li:hover {
+  background-color: #444444;
+}
+
+#editor {
+  position: absolute;
+  top: 50px; /* Below the top menu */
+  left: 250px; /* Next to the file explorer */
+  width: calc(
+    100% - 500px
+  ); /* Leave space for the file explorer and right panel */
+  height: calc(100% - 200px); /* Fixed height minus terminal and top menu */
+  padding: 20px;
+  font-family: monospace;
+  line-height: 1.5;
+  overflow-y: auto; /* Enable scrolling for overflowing content */
+  overflow-x: auto; /* Enable horizontal scrolling if necessary */
+  background-color: #2f383e;
+  color: #d4d4d4;
+}
+
+/* Add hover styles for the entire line */
+.ace-resume-custom .ace_line:hover {
+  background-color: #363846 !important;
+  transition: background-color 0.2s ease;
+}
+
+/* Make sure selection doesn't conflict with hover */
+.ace-resume-custom .ace_selection {
+  background-color: #44475a !important;
+}
+/* Active line highlight should be slightly different */
+.ace-resume-custom .ace_active-line {
+  background-color: #313340 !important;
+}
+.ace-resume-custom .ace_special_words {
+  cursor: pointer;
+}
+
+/* Right Panel */
+#right-panel-container {
+  position: absolute;
+  top: 50px; /* Below the top menu */
+  right: 0;
+  width: 250px; /* Fixed width for the right panel */
+  height: calc(100% - 200px); /* Fixed height minus terminal and top menu */
+  background-color: #333333;
+  overflow-y: auto; /* Enable scrolling for overflowing content */
+  padding: 10px;
+  color: #d4d4d4;
+}
+
+/* Terminal */
+#terminal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* Fixed height for the terminal */
+  background-color: #252526;
+  font-family: monospace;
+  overflow-y: auto; /* Enable scrolling for overflowing terminal content */
+  padding: 10px;
+  color: #d4d4d4;
+}
+
+.tooltip {
+  position: absolute;
+  display: none;
+  background: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 1000;
+}

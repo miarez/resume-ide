@@ -1,0 +1,47 @@
+ace-resume-custom {
+  background-color: #282a36;
+  color: #f8f8f2;
+}
+.ace-resume-custom .ace_gutter {
+  background: #282a36;
+  color: #6272a4;
+}
+.ace-resume-custom .ace_special_words {
+  color: #ff5555; /* Bright red for special words */
+  font-weight: bold;
+}
+.ace-resume-custom .ace_keyword {
+  color: #ff79c6;
+}
+.ace-resume-custom .ace_keyword.ace_control {
+  color: #ff79c6;
+}
+.ace-resume-custom .ace_support.ace_function {
+  color: #50fa7b;
+}
+.ace-resume-custom .ace_constant.ace_language {
+  color: #bd93f9;
+}
+.ace-resume-custom .ace_variable.ace_language {
+  color: #f1fa8c;
+}
+.ace-resume-custom .ace_constant.ace_numeric {
+  color: #bd93f9;
+}
+.ace-resume-custom .ace_string {
+  color: #f1fa8c;
+}
+.ace-resume-custom .ace_comment {
+  color: #6272a4;
+}
+.ace-resume-custom .ace_keyword.ace_operator {
+  color: #ff79c6;
+}
+.ace-resume-custom .ace_namespace.ace_qualifier {
+  color: #8be9fd; /* Cyan for qualifiers */
+  font-style: italic;
+}
+.ace-resume-custom .ace_namespace.ace_member {
+  color: #ffb86c; /* Orange for members */
+  font-weight: bold;
+}
