@@ -1,19 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import "ace-builds/src-min-noconflict/ace";
 import "ace-builds/src-min-noconflict/theme-dracula";
-import "ace-builds/src-min-noconflict/mode-text"; // Replace with your custom mode
+import "ace-builds/src-min-noconflict/mode-text";
 import highlightRules from "../data/HighlightRules.json";
 import "../styles/Editor.css";
 import "../styles/highlight-rules.css";
 import resumeContent from "../data/resumeContent";
 
 const Editor = () => {
-  const editorRef = useRef(null); // Reference to store the editor instance
-  const tooltipRef = useRef(null); // Reference to the tooltip element
+  const editorRef = useRef(null);
+  const tooltipRef = useRef(null);
 
   useEffect(() => {
-    console.log("RENDERING");
-
     const ace = require("ace-builds/src-min-noconflict/ace");
 
     // Define the highlighting rules
@@ -80,10 +78,15 @@ const Editor = () => {
     editor.setTheme("ace/theme/resume_custom");
     editor.session.setMode("ace/mode/resume");
     editor.setShowPrintMargin(false);
-    editor.setOption("tabSize", 2);
+    editor.setOption("tabSize", 1);
     editor.setFontSize(15);
     editor.setReadOnly(true);
+    editor.renderer.setPadding(0);
+    editor.renderer.setScrollMargin(0, 0, 0, 0);
+    editor.setOption("enableAutoIndent", false);
     editor.setValue(resumeContent, 1);
+    // editor.renderer.setShowGutter(false);
+
     editor.clearSelection();
 
     editor.container.addEventListener("click", handleClick);
@@ -141,6 +144,10 @@ const Editor = () => {
         case "support.function":
           showTooltip(e, `Function: ${token.value}`);
           break;
+        case "namespace.member":
+          showTooltip(e, `Member: ${token.value}`);
+          break;
+
         default:
           hideTooltip();
       }

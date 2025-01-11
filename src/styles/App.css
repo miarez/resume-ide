@@ -31,18 +31,22 @@ body {
 /* File Explorer (Left Panel) */
 #files {
   position: absolute;
-  top: 50px; /* Below the top menu */
+  top: 50px;
   left: 0;
-  width: 250px; /* Fixed width for the file explorer */
-  height: calc(100% - 200px); /* Fixed height minus terminal and top menu */
-  background-color: #333333;
-  overflow-y: auto; /* Scroll if content overflows */
+  width: 200px;
+  height: calc(100% - 200px);
+  background-color: #2d353b;
+  overflow-y: auto;
   padding: 10px;
   color: #d4d4d4;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
 }
 
 #files ul {
   list-style: none;
+  padding-left: 15px;
+  margin: 5px 0;
 }
 
 #files li {
@@ -54,12 +58,37 @@ body {
   background-color: #444444;
 }
 
+#files .category {
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: capitalize;
+  padding: 8px 10px;
+  background-color: #3a3f44;
+  border-radius: 4px;
+}
+
+#files .file {
+  padding-left: 20px; /* Indent files */
+}
+
+#files .file:hover {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+#files .file.active {
+  background-color: #0057e7; /* Highlight active file */
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
 #editor {
   position: absolute;
   top: 50px; /* Below the top menu */
-  left: 250px; /* Next to the file explorer */
+  left: 150px; /* Next to the file explorer */
   width: calc(
-    100% - 500px
+    100% - 400px
   ); /* Leave space for the file explorer and right panel */
   height: calc(100% - 200px); /* Fixed height minus terminal and top menu */
   padding: 20px;
@@ -109,7 +138,7 @@ body {
   left: 0;
   width: 100%;
   height: 150px; /* Fixed height for the terminal */
-  background-color: #252526;
+  background-color: #2d353b;
   font-family: monospace;
   overflow-y: auto; /* Enable scrolling for overflowing terminal content */
   padding: 10px;

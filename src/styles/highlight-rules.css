@@ -1,11 +1,12 @@
 ace-resume-custom {
-  background-color: #282a36;
+  background-color: #2f383e;
   color: #f8f8f2;
 }
 .ace-resume-custom .ace_gutter {
-  background: #282a36;
+  background: #2f383e;
   color: #6272a4;
 }
+
 .ace-resume-custom .ace_special_words {
   color: #ff5555; /* Bright red for special words */
   font-weight: bold;
@@ -29,7 +30,7 @@ ace-resume-custom {
   color: #bd93f9;
 }
 .ace-resume-custom .ace_string {
-  color: #f1fa8c;
+  color: #83c092;
 }
 .ace-resume-custom .ace_comment {
   color: #6272a4;
@@ -42,6 +43,11 @@ ace-resume-custom {
   font-style: italic;
 }
 .ace-resume-custom .ace_namespace.ace_member {
-  color: #ffb86c; /* Orange for members */
+  color: #ffb86c;
+  font-weight: bold;
+}
+
+.ace-resume-custom .ace_namespace.ace_lang {
+  color: #e67e80;
   font-weight: bold;
 }

@@ -1,20 +1,25 @@
-const resumeContent = `(new Resume())
+<?php
+
+
+$resume = 
+
+(new Resume())
   ->work_experience([
     (new Job())
       ->company(Company::SelfEmployed)
-      ->date_range(from = 2024_05, to = PRESENT) // 7 months
+      ->date_range($from = 2024_05, $to = PRESENT) // 7 months
         ->roles([
           (new Role(Title::BusinessAnalyst))
-            ->date_range(from = 2024_09, to = PRESENT) // 7 months
+            ->date_range($from = 2024_09, $to = PRESENT) // 7 months
             ->about([
               "Performed ad-hoc, root-cause, exploratory & product analyses",
               "Proposed UI/UX A/B Tests"
             ])
-            ->skills(Data::Analysis, Product::PerformanceMarketing|TrafficArbitrage|ABTesting)
+            ->skills(Data::Analysis, Product::PerformanceMarketing, Product::TrafficArbitrage, Product::ABTesting)
             ->tools(DataViz::Tableau, Lang::R, Lib::Pandas, Lang::Bash, Lib::GGPlot2, Lib::TidyVerse, DB::DuckDB)
           ,
           (new Role(Title::WebDeveloper))
-            ->date_range(from = 2024_06, to = 2024_08) // 2 months
+            ->date_range($from = 2024_06, $to = 2024_08) // 2 months
             ->about(["Ported Over HRTech Company's webapp into a chrome extension"])
             ->tools(Lang::TypeScript, Lib::React, Queue::AzureMessagingQueue)
         ])
@@ -22,10 +27,10 @@ const resumeContent = `(new Resume())
 
     (new Job())
     ->company(Company::Talent)
-    ->date_range(from = 2018_05, to = 2024_05) // 6 years
+    ->date_range($from = 2018_05, $to = 2024_05) // 6 years
       ->roles([
         (new Role(Title::SeniorSoftwareEngineer))
-          ->date_range(from = 2020_10, to = 2024_05) // 3 years 7 months
+          ->date_range($from = 2020_10, $to = 2024_05) // 3 years 7 months
           ->about([
 
           ])
@@ -42,10 +47,10 @@ const resumeContent = `(new Resume())
           Title::JuniorDeveloper,
           Title::BusinessAnalyst
         ]))
-          ->date_range(from = 2018_05, to = 2020_10) // 2 years 3 months
+          ->date_range($from = 2018_05, $to = 2020_10) // 2 years 3 months
           ->about([
             "Created New & Managed Legacy Internal Tools",
-            "Collected & Prepared Data for a 53M Series A Investment",
+            "Collected & Prepared Data for a $53M Series A Investment",
           ])
           ->skills(Code::Debugging, Data::Analysis, Product::TrafficArbitrage)
           ->tools(DB::ElasticSearch, DB::mySQL),
@@ -54,7 +59,7 @@ const resumeContent = `(new Resume())
 
   ->education([
     (new University())
-      ->date_range(from = 2012_07, to = 2016_01) // 4 years
+      ->date_range($from = 2012_07, $to = 2016_01) // 4 years
       ->major("Business Management")
       ->school("Wittenberg University")
       ->accomplishments([
@@ -69,6 +74,4 @@ const resumeContent = `(new Resume())
   ])
   ->personal_projects([
     Project::Meowdb, Project::Mylang, Project::MetricFrame, Project::ResumeIDE
-  ])`;
-
-export default resumeContent;
+  ])

@@ -1,18 +1,18 @@
 {
   "start": [
     {
-      "token": "special_words",
-      "regex": "\\b(meow|woof|quack|oink)\\b"
+      "token": "namespace.member",
+      "regex": "\\b(PerformanceMarketing|TrafficArbitrage|ABTesting|woof|quack|oink)\\b"
     },
+    {
+      "token": "namespace.lang",
+      "regex": "\\b(R|Python|Bash|PHP|JavaScript|TypeScript|Python|GremlinOpenCypher|CSS)\\b"
+    },
+
     {
       "token": "namespace.qualifier",
       "regex": "\\b[A-Za-z_][A-Za-z0-9_]*\\b(?=::)"
     },
-    {
-      "token": "namespace.member",
-      "regex": "(?<=::)[A-Za-z_][A-Za-z0-9_]*\\b"
-    },
-
     {
       "token": "keyword.control",
       "regex": "\\b(enum|case|new)\\b"

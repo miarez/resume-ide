@@ -1,0 +1,6 @@
+{
+  "skills": ["code", "data", "product"],
+  "tools": ["lang", "lib", "db", "dataviz", "queue"],
+  "certifications": ["google"],
+  "about-me": ["company", "title", "project"]
+}
