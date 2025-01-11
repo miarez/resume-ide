@@ -51,3 +51,20 @@ ace-resume-custom {
   color: #e67e80;
   font-weight: bold;
 }
+
+/* CSS for documentation comments */
+.ace_comment.ace_block.ace_documentation {
+  color: #6a9955; /* Light green for documentation comments */
+  font-style: italic; /* Italic style for emphasis */
+  background-color: rgba(106, 153, 85, 0.1); /* Light green background */
+  padding-left: 4px; /* Optional padding for indentation */
+  border-left: 3px solid #6a9955; /* Optional left border for visual separation */
+}
+/* CSS for general block comments */
+.ace_comment.ace_block {
+  color: #888888; /* Gray for general block comments */
+  font-style: normal; /* Regular font style */
+  background-color: rgba(136, 136, 136, 0.1); /* Light gray background */
+  padding-left: 2px; /* Optional padding */
+  border-left: 2px solid #888888; /* Optional left border */
+}

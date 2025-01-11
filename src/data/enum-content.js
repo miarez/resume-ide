@@ -1,4 +1,5 @@
-const company = `/**
+const company = `
+/**
  * A Comprehensive List of Companies I Have Worked At.
  */
 
@@ -109,6 +110,7 @@ const queue = `tool Queue {
 }`;
 
 export default {
+  README: "Welcome to the File Explorer!",
   company,
   project,
   title,

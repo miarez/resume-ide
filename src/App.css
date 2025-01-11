@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+.icon {
+  margin-right: 8px;
+  vertical-align: middle;
+  color: #d4d4d4; /* Adjust icon color */
+}
+
+.file.active .icon {
+  color: #ffffff; /* Highlight active file icon */
+}
+
+#mobile-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#mobile-message h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#mobile-message p {
+  font-size: 1.2rem;
+}

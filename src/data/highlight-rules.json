@@ -2,8 +2,9 @@
   "start": [
     {
       "token": "namespace.member",
-      "regex": "\\b(PerformanceMarketing|TrafficArbitrage|ABTesting|woof|quack|oink)\\b"
+      "regex": "\\b(PerformanceMarketing|TrafficArbitrage|ABTesting|EmailMarketing|Debugging|EventDrivenDevelopment|Analysis|DataEngineering|DataWareHousing|GraphDataBases|DataVisual|GGPlot2|TidyVerse|Pandas|Amcharts|React|DuckDB|ElasticSearch|mySQL|Neptune|Tableau|PowerBI|Grafana|AzureMessagingQueue|AWSKafka|RabbitMQ|BusinessIntelligence|AdvancedDataAnalytics|CyberSecurity|DigitalMarketing_And_ECommerce|ProductManagement|Talent|PopARide|SelfEmployed|BusinessAnalyst|WebDeveloper|SeniorSoftwareEngineer|DataEngineerJuniorDeveloper|Meowdb|MetricFrame|Mylang|ResumeIDE)\\b"
     },
+
     {
       "token": "namespace.lang",
       "regex": "\\b(R|Python|Bash|PHP|JavaScript|TypeScript|Python|GremlinOpenCypher|CSS)\\b"
@@ -51,6 +52,14 @@
     {
       "token": "comment.line.double-slash",
       "regex": "\\/\\/.*$"
+    },
+    {
+      "token": "comment.block.documentation",
+      "regex": "\\/\\*\\*[^]*?\\*\\/"
+    },
+    {
+      "token": "comment.block",
+      "regex": "\\/\\*[\\s\\S]*?\\*\\/"
     },
 
     {
